@@ -76,7 +76,7 @@
             $edad = $hoy->diff($fecha_nacimiento)->y;
 
             if ($edad < 2 || $edad > 100) {
-                $errores['edad'] = "La edad no es válida.";
+                $errores['edad'] = "La edad no es válida."; //hola
             }
         }
         // VALIDACION Y ENCRIPTACIÓN DE CONTRASEÑA
