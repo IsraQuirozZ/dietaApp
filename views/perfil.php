@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +26,11 @@
         <?php include "../components/navbar.php"?>
     </div>
     <?php echo "<h1>Hola $nombre</h1>"?>
+    <?php if (isset($_GET['mensaje']) && $_GET['mensaje'] === 'datos_actualizados'): ?> 
+      <div class="mensaje-exito">
+      <p>Datos actualizados correctamente.</p>
+      </div>
+    <?php endif; ?>
     <?php include "../components/footer.html"?>
     <script
       src="https://kit.fontawesome.com/6209fab7df.js"

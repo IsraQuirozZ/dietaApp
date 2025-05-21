@@ -2,11 +2,9 @@
   if(!defined('BASE_URL')) {
     require_once __DIR__ . '/../controllers/conexionLocal.php';
   }
-  //session_start();
   if (session_status() === PHP_SESSION_NONE) {
       session_start();
   }
-  //$nombre = $_SESSION['nombre'];
   $nombre = isset($_SESSION['nombre']) ? $_SESSION['nombre'] : 'Invitado';
   $inicial = strtoupper(substr($nombre,0,1));
 ?>
@@ -17,7 +15,8 @@
     <a href="<?= BASE_URL ?>controllers/logoutController.php">Cerrar Sesión</a>
     <div class="two-buttons">
       <a href="<?= BASE_URL ?>views/generarDieta.php"><button class="btn">Generar Dieta</button></a>
-      <a href="<?= BASE_URL ?>views/perfil.php"><button class="btn btn-perfil"> <?= $inicial ?></button></a>
+      <a href="<?= BASE_URL ?>views/datosCliente.php"><button class="btn">Datos del cuerpo</button></a>
+      <a href="<?= BASE_URL ?>views/perfil.php"><button class="btn btn-perfil"><?= $inicial ?></button></a>
     </div>
   <?php else: ?>
     <div class="two-buttons">
